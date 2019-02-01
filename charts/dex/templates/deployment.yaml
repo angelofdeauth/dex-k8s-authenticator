@@ -43,6 +43,9 @@ spec:
           items:
           - key: config.yaml
             path: config.yaml
+      - name: rootca
+        secret:
+          secretName: {{ template "dex.fullname" $ }}-rootca
 {{- if .Values.tls.create }}
       - name: tls
         secret:
