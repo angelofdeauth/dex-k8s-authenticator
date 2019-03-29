@@ -38,6 +38,9 @@ tls:
   #   -----BEGIN RSA PRIVATE KEY-----
   #   ...
   #   -----END RSA PRIVATE KEY-----
+  rootca:
+  #Put the LDAP root CA above. Set this to the Base64 encoded ca crt for the LDAP server.
+  #can be found using openssl s_client -showcerts -connect ldap.example.com:636 </dev/null | openssl x509 -outform PEM | base64 | tr -d '\n'
  
 ingress:
   enabled: false
